@@ -32,19 +32,7 @@ class _HomePage_State extends State<HomePage_> {
     // _loadMoreData();
   }
 
-  // getConnetivity() =>
-  //     subscription = Connectivity().onConnectivityChanged.listen(
-  //           (ConnectivityResult result) async {
-  //         isDeviceConnected = await InternetConnectionChecker().hasConnection;
-  //         if (!isDeviceConnected && isAlertSet == false) {
-  //           showDialogBox();
-  //           setState(() {
-  //             isAlertSet = true;
-  //           });
-  //         }
-  //       },
-  //     );
-  // Be sure to cancel subscription after you are done
+
   @override
   dispose() {
     // subscription.cancel();
@@ -96,41 +84,5 @@ class _HomePage_State extends State<HomePage_> {
 
 
 
-  // showDialogBox() => showCupertinoDialog<String>(
-  //   context: context,
-  //   builder: (context) =>  CupertinoAlertDialog(
-  //     title: Text('No Connection'),
-  //     content: Text('Please check your internet cennectivity'),
-  //     actions: <Widget>[
-  //       TextButton(
-  //         onPressed: () async {
-  //           Navigator.pop(context, 'Cancel');
-  //           setState(() => isAlertSet = false);
-  //           isDeviceConnected = await InternetConnectionChecker().hasConnection;
-  //           if (!isDeviceConnected){
-  //             showDialogBox();
-  //             setState(() {
-  //               isAlertSet = true;
-  //             });
-  //           }
-  //         },
-  //         child: Text('OK'),
-  //       )
-  //     ],
-  //   ),
-  // );
 
-
-  // Future<void> _loadMoreData() async {
-  //   var res = await  GetCardService.getCards();
-  //   res.fold((l) {
-  //     EasyLoading.showError(l);
-  //   }, (r) {
-  //     setState(() {
-  //       box!.addAll(r);
-  //     });
-  //     return box!;
-  //   }
-  //   );
-  // }
 }
